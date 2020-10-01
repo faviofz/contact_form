@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script type="text/javascript" src="js/script.js"></script>
+		<title>Contacto</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left-side">
+				<p>INFORMACION<br />DE CONTACTO</p>
+				<a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a>
+				<a href="tel:+11(555)999-9999">+11(555)999-9999</a>
+			</div>
+			<div class="right-side">
+				<p>Enviar un mensaje</p>
+				<form
+					id="myform"
+					action="contacto.php"
+					method="post"
+					name="formulario"
+					novalidate
+				>
+					<label for="nombre">Nombre:</label>
+					<input
+						type="text"
+						name="nombre"
+						id="nombre"
+						maxlength="50"
+						pattern="[A-Za-z]+"
+						required
+					/>
+					<label for="tel-num">Teléfono/Celular:</label>
+					<input
+						type="text"
+						name="tel-num"
+						id="tel-num"
+						pattern="[0-9]+"
+						maxlength="15"
+					/>
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" maxlength="50" required />
+					<label for="mensaje">Mensaje:</label>
+					<textarea
+						name="mensaje"
+						id="mensaje"
+						cols="30"
+						rows="2"
+						maxlength="400"
+					></textarea>
+				</form>
+				<input
+					id="submit"
+					type="submit"
+					value="Enviar mensaje"
+					form="myform"
+					disabled
+				/>
+			</div>
+		</div>
+	</body>
+</html>
